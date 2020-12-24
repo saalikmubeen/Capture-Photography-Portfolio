@@ -1,31 +1,53 @@
 import React from 'react';
+import styled from 'styled-components';
 import aboutImage from '../images/home1.png'; 
 
 
 const About = () => {
     return ( 
-        <div className="about">
+        <StyledAbout>
 
-            <div className="description">
+            <Description>
                 <div className="heading">
-                    <h1>We work to make</h1>
-                    <h1>your <span>dreams</span> come</h1>
-                    <h1>true</h1>
+                    <h2>We work to make</h2>
+                    <h2>your <span>dreams</span> come</h2>
+                    <h2>true</h2>
                 </div>
                 <p>Contact us for photography or videography ideas that you have. We have professionals with amazing skills to help you achieve it</p>
                 <button>Contact Us</button>
-            </div>
+            </Description>
 
-            <div className="about-image">
+            <Image>
                 <img src={aboutImage} alt="man holding camera"/>
-            </div>
+            </Image>
 
-        </div>
+        </StyledAbout>
     )
 }
 
 
+const StyledAbout = styled.div`
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5rem 10rem;
+    color: white;
+`
 
+const Description = styled.div`
+    flex: 1;
+    padding-right: 5rem;
 
+`
+
+const Image = styled.div`
+    flex: 1;
+    img {
+        width: 100%;
+        height: 80vh;
+        object-fit: cover;
+    }
+`
 
 export default About;
