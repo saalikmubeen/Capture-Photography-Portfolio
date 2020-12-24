@@ -1,11 +1,11 @@
 import React from 'react';
-import styled from 'styled-components';
 import aboutImage from '../images/home1.png'; 
+import { Section, Description, Image } from '../styles';
 
 
 const About = () => {
     return ( 
-        <StyledAbout>
+        <Section>
 
             <Description>
                 <div className="heading">
@@ -21,33 +21,9 @@ const About = () => {
                 <img src={aboutImage} alt="man holding camera"/>
             </Image>
 
-        </StyledAbout>
+        </Section>
     )
 }
 
-
-const StyledAbout = styled.div`
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 5rem 10rem;
-    color: white;
-`
-
-const Description = styled.div`
-    flex: 1;
-    padding-right: 5rem;
-
-`
-
-const Image = styled.div`
-    flex: 1;
-    img {
-        width: 100%;
-        height: 80vh;
-        object-fit: cover;
-    }
-`
 
 export default About;
