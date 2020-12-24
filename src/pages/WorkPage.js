@@ -5,9 +5,9 @@ import athlete from "../images/athlete-small.png";
 import theracer from "../images/theracer-small.png";
 import goodtimes from "../images/goodtimes-small.png";
 
-const Work = () => {
+const WorkPage = () => {
     return (
-        <StyledWork>
+        <Work>
 
             <Item>
                 <h2>The Athlete</h2>
@@ -33,12 +33,12 @@ const Work = () => {
                 </Link>
             </Item>
 
-        </StyledWork>
+        </Work>
     )
 }
 
 
-const StyledWork = styled.div`
+const Work = styled.div`
     min-height: 100vh;
     background-color: white;
 `
@@ -67,4 +67,4 @@ const Item = styled.div`
 
 
 
-export default Work;
+export default WorkPage;

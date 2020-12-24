@@ -5,6 +5,7 @@ import Nav from './components/Nav';
 import AboutPage from './pages/AboutPage';
 import WorkPage from './pages/WorkPage';
 import ContactPage from './pages/ContactPage';
+import WorkDetailsPage from './pages/WorkDetailsPage';
 
 
 const App = () => {
@@ -16,6 +17,7 @@ const App = () => {
             <Route path="/" exact component={AboutPage} />
             <Route path="/work" exact component={WorkPage} />
             <Route path="/contact" exact component={ContactPage} />
+            <Route path="/work/:id" exact component={WorkDetailsPage} />
         </Switch>
         </>
       )

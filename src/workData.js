@@ -5,7 +5,7 @@ import athlete2 from "./images/athlete2.png";
 import goodtimes2 from "./images/good-times2.jpg";
 import theracer2 from "./images/the-racer2.jpg";
 
-export const MovieState = () => {
+const WorkData = () => {
   return [
     {
       title: "The Athlete",
@@ -78,3 +78,5 @@ export const MovieState = () => {
     },
   ];
 };
+
+export default WorkData;
