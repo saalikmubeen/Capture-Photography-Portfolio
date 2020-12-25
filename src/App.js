@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Switch, Route, useLocation } from "react-router-dom";
 import { AnimatePresence } from 'framer-motion';
 import GlobalStyles from './components/GlobalStyles'; 
@@ -11,7 +11,11 @@ import WorkDetailsPage from './pages/WorkDetailsPage';
 
 const App = () => {
     const location = useLocation();
-    console.log(location)
+    
+    useEffect(() => {
+        window.scroll({ top: 0, left: 0 });
+    }, [location.pathname])
+
     return (
         <>
             <GlobalStyles />

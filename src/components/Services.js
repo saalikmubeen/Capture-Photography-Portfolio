@@ -6,7 +6,7 @@ import money from "../images/money.svg";
 import teamwork from "../images/teamwork.svg";
 import home2 from "../images/home2.png";
 import { Section, Description, Image } from '../styles'; 
-import { servicesAnimation } from '../animations';
+import { scrollAnimation } from '../animations';
 import useScroll from '../hooks/useScroll';
 
 
@@ -14,7 +14,7 @@ const Services = () => {
     const [element, controls] = useScroll();
 
     return (
-        <Section ref={element} variants={servicesAnimation} animate={controls} initial="hidden">
+        <Section ref={element} variants={scrollAnimation} animate={controls} initial="hidden">
 
             <ServicesDescription>
             <h2>High <span>quality</span> services</h2>
