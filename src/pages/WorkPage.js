@@ -1,13 +1,16 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
+import { motion } from 'framer-motion';
 import athlete from "../images/athlete-small.png";
 import theracer from "../images/theracer-small.png";
 import goodtimes from "../images/goodtimes-small.png";
 
+import { pageAnimation } from '../animations';
+
 const WorkPage = () => {
     return (
-        <Work>
+        <Work variants={pageAnimation} initial="hidden" animate="visible" exit="exit">
 
             <Item>
                 <h2>The Athlete</h2>
@@ -38,7 +41,7 @@ const WorkPage = () => {
 }
 
 
-const Work = styled.div`
+const Work = styled(motion.div)`
     min-height: 100vh;
     background-color: white;
 `

@@ -1,6 +1,7 @@
 import React from 'react';
 import aboutImage from '../images/home1.png'; 
 import { Section, Description, Image } from '../styles';
+import { motion } from 'framer-motion';
 
 
 const About = () => {

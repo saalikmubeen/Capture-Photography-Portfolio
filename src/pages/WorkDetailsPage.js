@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { useHistory } from 'react-router-dom';
+import { motion } from 'framer-motion';
 import styled from 'styled-components';
 import workData from '../workData';
+import { pageAnimation } from '../animations';
 
 
 const WorkDetailsPage = () => {
@@ -15,7 +17,7 @@ const WorkDetailsPage = () => {
     return (
         <>
             {work &&
-                <WorkDetails>
+                <WorkDetails variants={pageAnimation} initial="hidden" animate="visible" exit="exit">
 
                     <Headline>
                         <h2>{work.title}</h2>
@@ -53,7 +55,7 @@ const Award = ({ title, description }) => {
 };
 
 
-const WorkDetails = styled.div`
+const WorkDetails = styled(motion.div)`
     color: white;
 `
 

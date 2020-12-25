@@ -1,15 +1,19 @@
 import React from 'react';
+import { motion } from 'framer-motion';
+
 import About from '../components/About';
 import Services from '../components/Services';
 import Faq from '../components/Faq.js';
 
+import { pageAnimation } from '../animations';
+
 const AboutPage = () => {
     return (
-        <div className="AboutPage">
+        <motion.div variants={pageAnimation} initial="hidden" animate="visible" exit="exit" className="AboutPage">
             <About />
             <Services />
             <Faq/>
-        </div>
+        </motion.div>
     )
 }
 
