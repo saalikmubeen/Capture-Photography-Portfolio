@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import Toggle from './Toggle';
 
 
 const Faq = () => {
@@ -7,8 +8,8 @@ const Faq = () => {
         <StyledFaq>
             <h2>Any Questions? <span>FAQ</span></h2>
             <div className="faq-questions">
-                <div>
-                    <p className="question">How Do I Start?</p>
+
+                <Toggle title="How Do I Start?">
                     <div className="answer">
                         <p>Lorem ipsum dolor sit amet.</p>
                         <p>
@@ -16,10 +17,9 @@ const Faq = () => {
                             autem accusamus ex laboriosam porro, adipisci quam.
                         </p>
                     </div>
-                    <div className="faq-line" />
-                </div>
-                <div>
-                    <p className="question">What Products Do You Offer?</p>
+                </Toggle>
+
+                <Toggle title="What Products Do You Offer?">
                     <div className="answer">
                         <p>Lorem ipsum dolor sit amet.</p>
                         <p>
@@ -28,10 +28,9 @@ const Faq = () => {
                         magnam placeat corporis.
                         </p>
                     </div>    
-                    <div className="faq-line" />
-                </div>
-                <div>
-                    <p className="question">Different Payment Methods</p>
+                </Toggle>
+
+                <Toggle title="Different Payment Methods">
                     <div className="answer">
                         <p>Lorem ipsum dolor sit amet.</p>
                         <p>
@@ -40,10 +39,9 @@ const Faq = () => {
                             magnam placeat corporis.
                         </p>
                     </div>
-                    <div className="faq-line" />
-                </div>
-                <div>
-                    <p className="question">Daily Schedule</p>
+                </Toggle>
+
+                <Toggle title="Daily Schedule">
                     <div className="answer">
                         <p>Lorem ipsum dolor sit amet.</p>
                         <p>
@@ -52,8 +50,8 @@ const Faq = () => {
                             magnam placeat corporis.
                         </p>
                     </div>
-                    <div className="faq-line" />
-                </div>
+                </Toggle>
+
             </div>        
         </StyledFaq>
     )
