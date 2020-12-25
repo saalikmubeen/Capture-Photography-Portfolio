@@ -1,8 +1,9 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 import aboutImage from '../images/home1.png'; 
 import { Section, Description, Image, Hide } from '../styles';
-import { motion } from 'framer-motion';
 import { titleAnimation, fadeAnimation, ImageAnimation } from '../animations';
+import Wave from './Wave';
 
 
 const About = () => {
@@ -28,6 +29,8 @@ const About = () => {
             <Image>
                 <motion.img variants={ImageAnimation} src={aboutImage} alt="man holding camera"/>
             </Image>
+
+            <Wave/>
 
         </Section>
     )
