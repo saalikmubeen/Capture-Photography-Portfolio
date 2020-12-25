@@ -18,6 +18,7 @@ const Description = styled.div`
 
 const Image = styled.div`
     flex: 1;
+    overflow: hidden;
     img {
         width: 100%;
         height: 80vh;
@@ -25,4 +26,8 @@ const Image = styled.div`
     }
 `
 
-export { Section, Description, Image };
+const Hide = styled.div`
+    overflow: hidden;
+`
+
+export { Section, Description, Image, Hide };
