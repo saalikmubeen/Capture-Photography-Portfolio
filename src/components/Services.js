@@ -1,7 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import { useInView } from 'react-intersection-observer';
-import { useAnimation } from 'framer-motion';
 import clock from "../images/clock.svg";
 import diaphragm from "../images/diaphragm.svg";
 import money from "../images/money.svg";
@@ -9,17 +7,11 @@ import teamwork from "../images/teamwork.svg";
 import home2 from "../images/home2.png";
 import { Section, Description, Image } from '../styles'; 
 import { servicesAnimation } from '../animations';
+import useScroll from '../hooks/useScroll';
 
 
 const Services = () => {
-    const [element, view] = useInView({ threshold: 0.35 });
-    const controls = useAnimation();
-
-    if (view) {
-        controls.start('visible')
-    } else {
-        controls.start('hidden')
-    }
+    const [element, controls] = useScroll();
 
     return (
         <Section ref={element} variants={servicesAnimation} animate={controls} initial="hidden">

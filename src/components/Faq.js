@@ -1,20 +1,13 @@
 import React from 'react';
-import { useInView } from 'react-intersection-observer';
-import { useAnimation, motion } from 'framer-motion';
+import { motion } from 'framer-motion';
 import styled from 'styled-components';
 import Toggle from './Toggle';
 import { fadeAnimation } from '../animations';
+import useScroll from '../hooks/useScroll';
 
 
 const Faq = () => {
-    const [element, view] = useInView({ threshold: 0.35 });
-    const controls = useAnimation();
-
-    if (view) {
-        controls.start('visible')
-    } else {
-        controls.start('hidden')
-    }
+    const [element, controls] = useScroll();
 
     return (
         <StyledFaq ref={element} variants={fadeAnimation} animate={controls} initial="hidden">
