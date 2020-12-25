@@ -1,11 +1,23 @@
 import React from 'react';
+import { useInView } from 'react-intersection-observer';
+import { useAnimation, motion } from 'framer-motion';
 import styled from 'styled-components';
 import Toggle from './Toggle';
+import { fadeAnimation } from '../animations';
 
 
 const Faq = () => {
+    const [element, view] = useInView({ threshold: 0.35 });
+    const controls = useAnimation();
+
+    if (view) {
+        controls.start('visible')
+    } else {
+        controls.start('hidden')
+    }
+
     return (
-        <StyledFaq>
+        <StyledFaq ref={element} variants={fadeAnimation} animate={controls} initial="hidden">
             <h2>Any Questions? <span>FAQ</span></h2>
             <div className="faq-questions">
 
@@ -58,7 +70,7 @@ const Faq = () => {
 }
 
 
-const StyledFaq = styled.div`
+const StyledFaq = styled(motion.div)`
     min-height: 100vh;
     display: block;
     padding: 5rem 10rem;

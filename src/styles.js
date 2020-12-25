@@ -1,7 +1,7 @@
 import styled from 'styled-components';
+import { motion } from 'framer-motion';
 
-
-const Section = styled.div`
+const Section = styled(motion.div)`
     min-height: 100vh;
     display: flex;
     align-items: center;

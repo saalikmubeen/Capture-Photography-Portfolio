@@ -34,3 +34,8 @@ export const colorAnimationContainer = {
     hidden: { opacity: 1 },
     visible: { opacity: 1, transition: { duration: 1, ease: 'easeOut', staggerChildren: 0.1 } }
 }
+
+export const servicesAnimation = {
+    hidden: { opacity: 0, scale: 1.3, transition: { duration: 0.5 } },
+    visible: { opacity: 1, scale: 1, transition: { duration: 0.5 } }
+}
