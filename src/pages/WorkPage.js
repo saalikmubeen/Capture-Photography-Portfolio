@@ -55,11 +55,19 @@ const WorkPage = () => {
 const Work = styled(motion.div)`
     min-height: 100vh;
     background-color: white;
+    padding: 5rem 10rem;
+
+    @media (max-width: 1200px) {
+        padding: 3rem 3rem;
+    }
+
+    @media (max-width: 700px) {
+        padding: 2rem 2rem;
+    }
 `
 
 
 const Item = styled.div`
-     padding: 5rem 10rem;
 
      h2 {
          margin: 1rem 0rem;

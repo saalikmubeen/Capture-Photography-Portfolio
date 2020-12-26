@@ -1,16 +1,16 @@
 import athlete from "./images/athlete-small.png";
 import goodtimes from "./images/goodtimes-small.png";
 import theracer from "./images/theracer-small.png";
-import athlete2 from "./images/athlete2.png";
 import goodtimes2 from "./images/good-times2.jpg";
 import theracer2 from "./images/the-racer2.jpg";
+import download from './images/download.jpg';
 
 const WorkData = () => {
   return [
     {
       title: "The Athlete",
       mainImg: athlete,
-      secondaryImg: athlete2,
+      secondaryImg: download,
       url: "/work/the-athlete",
       awards: [
         {

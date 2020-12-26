@@ -54,7 +54,7 @@ const StyledNav = styled.nav`
 
     ul{
         display: flex;
-        list-style: none
+        list-style: none;
     } 
 
     li {
@@ -65,6 +65,23 @@ const StyledNav = styled.nav`
     a {
         font-size: .9rem;
     }
+    }
+
+    @media (max-width: 900px) {
+        flex-direction: column;
+        padding: 1rem;
+        #logo {
+            display: inline-block;
+            margin: 0.5rem;
+        }
+        ul {
+            padding: 1rem;
+            justify-content: space-around;
+            width: 100%;
+        li {
+            padding: 0;
+        }
+        }
     }
 `
 

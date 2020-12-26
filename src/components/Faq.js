@@ -94,8 +94,17 @@ const StyledFaq = styled(motion.div)`
         p {
             padding: 1rem 0rem;
             font-size: 1.1rem;
-        }
-}
+        }  
+    }
+
+    @media (max-width: 900px) {
+        margin: 2rem 0rem 5rem 0rem;
+        padding: 2rem 6rem;
+    }
+
+    @media (max-width: 500px) {
+        padding: 1rem 2rem;
+    }
 `
 
 export default Faq;

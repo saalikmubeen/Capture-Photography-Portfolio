@@ -68,17 +68,40 @@ const ServicesDescription = styled(Description)`
 const Cards = styled.div`
     display: flex;
     flex-wrap: wrap;
+
+    @media (max-width: 900px) {
+        justify-content: center;
+    }
 `
 
 const Card = styled.div`
+    flex-basis: 50%;
+    @media (max-width: 900px) {
+        flex-basis: auto;
+    }
+
+    @media (max-width: 400px) {
+        flex-basis: 100%;
+        justify-self: center;
+    }
+
     div{
         display: flex;
         align-items: center;
+
+        @media (max-width: 400px) {
+            justify-content: center;
+        }
     }
     p {
         width: 70%;
         font-size: 1rem;
         padding: 2rem 0rem 4rem 0rem;
+        
+        @media (max-width: 400px) {
+            width: 100%;
+            text-align: center;
+        }
     }
     h3 {
         margin-left: 1rem;
